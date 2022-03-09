@@ -2,15 +2,12 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import config from './../../config/config.json';
+import { AuthValidation } from './../../config/AuthValidation';
 
 import ContentHeader from './../../components/RegisterLogin/ContentHeader';
 import Welcome from './../../components/RegisterLogin/Welcome';
 
 import './Register.scss';
-
-const validEmail = /^([a-z0-9_\\.-]+)@([\da-z\\.-]+)\.([a-z\\.]{2,6})$/;
-const validPassword =
-  /^(?=.*[A-Za-z])(?=.*\d)(?=.*[$@$!%*#?&])[A-Za-z\d$@$!%*#?&]{8,}$/;
 
 const Register = () => {
   const [formInput, setFormInput] = useState({});
@@ -46,8 +43,8 @@ const Register = () => {
     const validator = {
       name: isKeyValid(name),
       id: isKeyValid(id),
-      email: validEmail.test(email),
-      password: validPassword.test(password),
+      email: AuthValidation.validEmail.test(email),
+      password: AuthValidation.validPw.test(password),
       rePassword: rePassword === password,
       birth: isKeyValid(birth),
       tel: isKeyValid(tel),

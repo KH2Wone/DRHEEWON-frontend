@@ -2,29 +2,28 @@ import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 
 import config from './../../config/config.json';
+import { AuthValidation } from './../../config/AuthValidation';
 
 import ContentHeader from './../../components/RegisterLogin/ContentHeader';
 import Welcome from './../../components/RegisterLogin/Welcome';
 
 import './Login.scss';
 
-const validPassword =
-  /^(?=.*[A-Za-z])(?=.*\d)(?=.*[$@$!%*#?&])[A-Za-z\d$@$!%*#?&]{8,}$/;
-
 const Login = () => {
+  const navigate = useNavigate();
   const [formInput, setFormInput] = useState({
     id: '',
     pw: '',
   });
-  const navigate = useNavigate();
-  const isValidLogin = formInput.id && validPassword.test(formInput.pw);
+  const isValidLogin =
+    formInput.id && AuthValidation.validPw.test(formInput.pw);
 
   const handleLoginInput = e => {
     const { value, name } = e.target;
     setFormInput({ ...formInput, [name]: value });
   };
 
-  const goToMain = () => {
+  const trySubmitLogin = () => {
     const { BASE_URL } = config;
     fetch(`${BASE_URL}users/signin`, {
       method: 'POST',
@@ -74,7 +73,7 @@ const Login = () => {
             <button
               disabled={!isValidLogin}
               className="submitRegister"
-              onClick={goToMain}
+              onClick={trySubmitLogin}
               type="button"
             >
               로그인
