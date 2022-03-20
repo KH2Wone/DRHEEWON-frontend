@@ -7,6 +7,9 @@
 </div>
 
 
+<div><iframe width="560" height="315" src="https://www.youtube.com/embed/2N2a-kErsPc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+
+
 ## 프로젝트 소개 💁🏻‍♀️
 
 닥터마틴 클론 프로젝트를 진행한 28기 닥터희원팀입니다.<br>
@@ -124,8 +127,12 @@ eslint / prettier
 ![navGif](https://user-images.githubusercontent.com/23470125/148691003-7340f6d4-7166-440b-a1bd-52f93215b015.gif)
 
 - 회원가입 | **강희원**
+![register_success](https://user-images.githubusercontent.com/66713535/159174462-609d10ef-b5c8-4c5d-9e9c-3842398e8355.gif)
+![register_error](https://user-images.githubusercontent.com/66713535/159174456-5eae928a-a6ca-425f-bc1e-bb9fc7d19b21.gif)
 
 - 로그인 | **강희원**
+![login](https://user-images.githubusercontent.com/66713535/159174450-8b521820-28c8-429c-b501-383ba0235411.gif)
+로그인
 
 - 상품 리스트 | **김용선**
 
@@ -134,3 +141,4 @@ eslint / prettier
 ![전체 구현](https://user-images.githubusercontent.com/93597794/148706291-b44af6c9-3ba4-4108-9e45-e95f65b4179b.gif)
 
 - 장바구니 | **강희원**
+
